@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <main class="container">
+        <section class="page-header">
+            <h1>Sabias que...</h1>
+            <p>Descubre los secretos detras de uno de los autos mas premiados del mundo.</p>
+        </section>
+
+        <section class="curiosities-grid">
+            <article class="curiosity-card">
+                <img src="/static/imagenes/mazda 1.jpg" alt="Mazda 3">
+                <div class="card-content">
+                    <h3>Campeon Mundial de Diseno</h3>
+                    <p>En 2020, el Mazda 3 gano el prestigioso premio <strong>"World Car Design of the Year"</strong>, superando a marcas de ultra lujo gracias a su estetica minimalista.</p>
+                </div>
+            </article>
+
+            <article class="curiosity-card">
+                <img src="/static/imagenes/mazda 2.jpg" alt="Jinba Ittai">
+                <div class="card-content">
+                    <h3>Jinba-Ittai</h3>
+                    <p>Es la filosofia japonesa que guia su creacion: "El jinete y el caballo en un solo cuerpo". Se busca que la respuesta del auto sea tan natural como un movimiento humano.</p>
+                </div>
+            </article>
+
+            <article class="curiosity-card">
+                <img src="/static/imagenes/mazda.jpeg" alt="Soul Red">
+                <div class="card-content">
+                    <h3>El color mas complejo</h3>
+                    <p>El color <strong>Soul Red Crystal</strong> tiene un proceso de tres capas que utiliza escamas de aluminio para crear sombras profundas y reflejos vibrantes unicos en la industria.</p>
+                </div>
+            </article>
+
+            <article class="curiosity-card">
+                <img src="{{ url_for('static', path='imagenes/mazda 2.jpg') }}" alt="Mazda Origin">
+                <div class="card-content">
+                    <h3>Origen del nombre</h3>
+                    <p>Aunque la marca viene de su fundador Jujiro Matsuda, el nombre "Mazda" tambien rinde homenaje a <strong>Ahura Mazda</strong>, el dios de la armonia, la inteligencia y la sabiduria.</p>
+                </div>
+            </article>
+        </section>
+    </main>
+{% endblock %}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block meta %}{% endblock %}
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <span class="brand">MAZDA</span> <span class="model">3</span>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/plantillas/index.html" class="{{ 'active' if active_page == 'index' else '' }}">Especificaciones</a></li>
+                <li><a href="/plantillas/curiosos.html" class="{{ 'active' if active_page == 'curiosos' else '' }}">Datos Curiosos</a></li>
+                <li><a href="/plantillas/proceso.html" class="{{ 'active' if active_page == 'proceso' else '' }}">Proceso</a></li>
+                <li><a href="/plantillas/versiones.html" class="{{ 'active' if active_page == 'versiones' else '' }}">Versiones</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    {% block content %}{% endblock %}
+
+    <footer class="main-footer">
+        <p>&copy; {{ footer_text }}</p>
+    </footer>
+</body>
+</html>

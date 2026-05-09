@@ -1,0 +1,231 @@
+
+:root {
+    --primary-red: #910a0a;    
+    --dark-bg: #111111;       
+    --light-bg: #f8f8f8;     
+    --white: #ffffff;
+    --text-dark: #1a1a1a;
+    --text-light: #f4f4f4;
+    --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--white);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+.navbar {
+    background: var(--dark-bg);
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--text-light);
+    font-size: 1.4rem;
+}
+
+.logo span {
+    color: var(--primary-red);
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: var(--text-light);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--primary-red);
+}
+
+
+.main-footer {
+    background: var(--dark-bg);
+    color: #666;
+    text-align: center;
+    padding: 50px 0;
+    margin-top: 100px;
+    font-size: 0.9rem;
+}
+
+
+.badge {
+    background: var(--primary-red);
+    color: white;
+    padding: 5px 15px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.spec-card, .curiosity-card {
+    background: white;
+    padding: 40px;
+    border-radius: 2px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+    transition: var(--transition);
+    border-top: 3px solid transparent;
+}
+
+.spec-card:hover {
+    transform: translateY(-10px);
+    border-top: 3px solid var(--primary-red);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.separator {
+    width: 50px;
+    height: 3px;
+    background: var(--primary-red);
+    margin: 20px 0;
+    border: none;
+}
+
+
+
+
+.hero-spec {
+    background: var(--dark-bg);
+    color: white;
+    text-align: center;
+    padding: 100px 0 0 0;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 300;
+    letter-spacing: -1px;
+}
+
+.hero-image-container {
+    margin-top: 50px;
+}
+
+.specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: -50px; 
+    position: relative;
+    z-index: 10;
+}
+
+
+.version-item {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin: 120px 0;
+}
+
+.version-item.inverse {
+    flex-direction: row-reverse;
+}
+
+.version-img {
+    width: 55%;
+    filter: brightness(0.9);
+    transition: var(--transition);
+}
+
+.version-img:hover {
+    filter: brightness(1);
+}
+
+
+.process-hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url('/static/imagenes/mazda.jpeg') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.process-step {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 0;
+    gap: 50px;
+}
+
+.step-number {
+    font-size: 6rem;
+    font-weight: 800;
+    color: rgba(0,0,0,0.05);
+    position: absolute;
+    margin-top: -40px;
+}
+
+
+.curiosities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 40px;
+    padding: 60px 0;
+}
+
+
+@media (max-width: 768px) {
+    .version-item, .version-item.inverse, .process-step {
+        flex-direction: column;
+    }
+    .version-img, .version-info {
+        width: 100%;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+}

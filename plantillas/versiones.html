@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <main class="container">
+        <section class="page-header">
+            <h1>Versiones y Acabados</h1>
+            <p>Disenado para elevar tus sentidos en cada trayecto.</p>
+        </section>
+
+        <div class="versions-container">
+            <article class="version-item">
+                <img src="{{ url_for('static', path='imagenes/mazda 4.jpg') }}" alt="Mazda 3 Sedan" class="version-img">
+                <div class="version-info">
+                    <span class="badge">Elegancia</span>
+                    <h2>Mazda 3 Sedan</h2>
+                    <p>El equilibrio perfecto entre sofisticacion y tecnologia. Ideal para quienes buscan un perfil ejecutivo.</p>
+                    <ul class="features-list">
+                        <li>Rines de 16" o 18"</li>
+                        <li>Quemacocos electrico</li>
+                        <li>Faros LED dirigibles</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="version-item inverse">
+                <div class="version-info">
+                    <span class="badge">Deportivo</span>
+                    <h2>Mazda 3 Hatchback</h2>
+                    <p>Un diseno audaz que captura la luz y el movimiento. Curvas fluidas para un espiritu libre.</p>
+                    <ul class="features-list">
+                        <li>Spoiler trasero deportivo</li>
+                        <li>Acabados en color negro brillante</li>
+                        <li>Camara de vision 360 grados</li>
+                    </ul>
+                </div>
+                <img src="{{ url_for('static', path='imagenes/mazda 1.jpg') }}" alt="Mazda 3 Hatchback" class="version-img">
+            </article>
+
+            <article class="version-item">
+                <img src="{{ url_for('static', path='imagenes/mazda 5.jpg') }}" alt="Mazda 3 Signature Turbo" class="version-img">
+                <div class="version-info">
+                    <span class="badge premium">Alto Rendimiento</span>
+                    <h2>Signature Turbo</h2>
+                    <p>El maximo exponente de la linea. Traccion AWD y potencia pura bajo el capo.</p>
+                    <ul class="features-list">
+                        <li>Motor 2.5L Turbo 227 HP</li>
+                        <li>Traccion i-Activ AWD</li>
+                        <li>Sistema de audio Bose de 12 bocinas</li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+    </main>
+{% endblock %}

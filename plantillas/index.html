@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block meta %}
+    <meta name="description" content="Especificaciones tecnicas del Mazda 3 - Ingenieria y Diseno">
+{% endblock %}
+
+{% block content %}
+    <section class="hero-spec">
+        <div class="hero-content">
+            <h1>Ingenieria Humana</h1>
+            <p>Donde la potencia se encuentra con la eficiencia.</p>
+        </div>
+        <div class="hero-image-container">
+            <img src="/static/imagenes/mazda.jpeg" alt="Mazda 3">
+        </div>
+    </section>
+
+    <main class="container">
+        <section class="specs-intro">
+            <h2>Especificaciones Tecnicas</h2>
+            <hr class="separator">
+        </section>
+
+        <div class="specs-grid">
+            <article class="spec-card">
+                <div class="card-icon">Motor</div>
+                <h3>Motorizacion</h3>
+                <ul>
+                    <li>Motor Skyactiv-G 2.5L</li>
+                    <li>186 HP @ 6,000 rpm</li>
+                    <li>Torque de 186 lb-pie</li>
+                    <li>Transmision Automatica de 6 vel.</li>
+                </ul>
+            </article>
+
+            <article class="spec-card">
+                <div class="card-icon">Auto</div>
+                <h3>Dimensiones</h3>
+                <ul>
+                    <li>Longitud total: 4,660 mm</li>
+                    <li>Capacidad tanque: 50L</li>
+                    <li>Volumen de carga: 358L</li>
+                    <li>Rines de aleacion de 18"</li>
+                </ul>
+            </article>
+
+            <article class="spec-card">
+                <div class="card-icon">Tech</div>
+                <h3>Infotenimiento</h3>
+                <ul>
+                    <li>Pantalla a color de 10.25"</li>
+                    <li>Apple CarPlay inalambrico</li>
+                    <li>Sistema de audio Bose</li>
+                    <li>Head-up Display</li>
+                </ul>
+            </article>
+        </div>
+
+        <section class="security-banner">
+            <div class="banner-text">
+                <h2>Seguridad i-Activsense</h2>
+                <p>Equipado con los sistemas mas avanzados para proteger lo que mas importa.</p>
+            </div>
+            <img src="/static/imagenes/mazda 1.jpg" alt="Detalle interior Mazda 3" class="banner-img">
+        </section>
+    </main>
+{% endblock %}
